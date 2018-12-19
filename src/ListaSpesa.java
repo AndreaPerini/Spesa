@@ -19,21 +19,33 @@ public class ListaSpesa {
 	}
 
 	public void aggiungiProdotto(Prodotto prodotto) {
-		lista[index] = prodotto;
-		index++;
+		if (index == 99) {
+			System.out.println("Lo scaffale è pieno");
+		} else {
+			lista[index] = prodotto;
+			index++;
+		}
 	}
 
 	public void rimuoviProdotto(String nome) {
-		for (int i = 0; i <= index; i++) {
-			if (lista[i].nome.equalsIgnoreCase(nome)) {
-				lista[i] = null;
-				for (int j = i; j <= index; j++) {
-					lista[j] = lista[j + 1];
+		if (index != 0) {
+			for (int i = 0; i <= index; i++) {
+				if (lista[i].nome.equalsIgnoreCase(nome)) {
+					lista[i] = null;
+					for (int j = i; j <= index; j++) {
+						lista[j] = lista[j + 1];
+					}
+					i = index;
 				}
-				i = index;
 			}
+			index--;
 		}
-		index--;
+	}
+
+	public void calcolaTotale() {
+		for (int i = 0; i < index; i++) {
+			this.totale += lista[i].getPrezzo();
+		}
 	}
 
 }

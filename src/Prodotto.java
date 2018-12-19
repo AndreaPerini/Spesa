@@ -3,10 +3,18 @@ public class Prodotto {
 
 	String nome;
 	private float prezzo;
-	Prodotto[] prodotti = new Prodotto[10];
+	static Prodotto[] prodotti = new Prodotto[10];
+	private int indice = 0;
+	
+	public int getIndice() {
+		return indice;
+	}
+
+	public void setIndice(int indice) {
+		this.indice = indice;
+	}
 
 	public Prodotto(float prezzo) {
-		super();
 		this.prezzo = prezzo;
 	}
 
@@ -26,10 +34,10 @@ public class Prodotto {
 		this.prezzo = prezzo;
 	}
 
-	public void elenco() {
+	public static void elenco() {
 		for (int i = 0; i < 10; i++) {
 			System.out.println("- " + prodotti[i]);
 		}
 	}
-
+	
 }
