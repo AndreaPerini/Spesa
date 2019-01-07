@@ -21,6 +21,10 @@ public class Alimentari extends Prodotto {
 		this.scadenza = scadenza;
 	}
 
+	public Alimentari(float prezzo) {
+		super(prezzo);
+	}
+
 	public static void elenco() {
 		for (int i = 0; i < indiceStampa; i++) {
 			System.out.println("- " + prodotti[stampare[i]]);

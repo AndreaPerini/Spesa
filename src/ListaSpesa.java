@@ -4,6 +4,10 @@ public class ListaSpesa {
 	private Prodotto[] lista = new Prodotto[100];
 	private static int index = 0;
 	private float totale = 0;
+	
+	public float getTotale() {
+		return totale;
+	}
 
 	public void creaLista() {
 		for (int i = 0; i < 100; i++) {
@@ -20,7 +24,7 @@ public class ListaSpesa {
 
 	public void aggiungiProdotto(Prodotto prodotto) {
 		if (index == 99) {
-			System.out.println("Lo scaffale è pieno");
+			System.out.println("Il carrello è pieno");
 		} else {
 			lista[index] = prodotto;
 			index++;
@@ -39,6 +43,9 @@ public class ListaSpesa {
 				}
 			}
 			index--;
+		}
+		else {
+			System.out.println("Il carrello è già vuoto");
 		}
 	}
 
