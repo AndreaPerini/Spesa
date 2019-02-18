@@ -5,6 +5,9 @@ public class ListaSpesa {
 	private static int index = 0;
 	private float totale = 0;
 	
+	public ListaSpesa() {
+	}
+	
 	public float getTotale() {
 		return totale;
 	}

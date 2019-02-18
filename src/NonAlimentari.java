@@ -4,6 +4,10 @@ public class NonAlimentari extends Prodotto {
 	private String materiale;
 	private static int indiceStampa = 0;
 	private static int stampare[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+	
+	public NonAlimentari() {
+		super();
+	}
 
 	public String getMateriale() {
 		return materiale;

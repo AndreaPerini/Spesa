@@ -6,6 +6,9 @@ public class Prodotto {
 	public static Prodotto[] prodotti = new Prodotto[10];
 	private int indice = 0;
 	
+	public Prodotto() {
+	}
+
 	public int getIndice() {
 		return indice;
 	}

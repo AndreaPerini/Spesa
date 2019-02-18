@@ -6,7 +6,9 @@ public class Alimentari extends Prodotto {
 	private static int indiceStampa = 0;
 	private static int stampare[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 	
-	
+	public Alimentari() {
+		super();
+	}
 	
 	public LocalDate getScadenza() {
 		return scadenza;
